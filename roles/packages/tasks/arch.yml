@@ -1,0 +1,45 @@
+# Package Installation --------------------------------------
+- name: install packages
+  become: yes
+  pacman:
+    update_cache: yes
+    name:
+      - alacritty
+      - arandr
+      - bash-completion
+      - btop
+      - git
+      - gvim
+      - htop
+      - keychain
+      - linux-lts-headers
+      - neovim
+      - nodejs
+      - openssh
+      - peek
+      - remmina
+      - samba
+      - shutter
+      - smbclient
+      - the_silver_searcher
+      - tig
+      - tmux
+      - tree
+      - xclip
+      - yay
+
+      # Fonts
+      - ttf-dejavu
+
+      # Programming
+      - base-devel
+      - ccls
+      - cscope
+      - ctags
+      - fzf
+      - go
+      - python
+      - python-pip
+      - python-pexpect
+      - python-setuptools
+      - yarn

@@ -1,0 +1,58 @@
+# Add APT repos --------------------------------------
+# For some reason, using Ansible's built in apt repo modules doesn't work
+- name: Add ppa for Alacritty.
+  become: yes
+  shell: sh -c 'add-apt-repository -y ppa:aslatter/ppa'
+
+- name: Add ppa for updated stable neovim.
+  become: yes
+  shell: sh -c 'add-apt-repository -y ppa:neovim-ppa/unstable'
+
+# Package Installation --------------------------------------
+- name: install packages
+  become: yes
+  apt:
+    pkg:
+      - alacritty
+      - arandr
+      - bash-completion
+      - btop
+      - cifs-utils
+      - curl
+      - git
+      - htop
+      - keyutils
+      - lsb-release
+      - neovim
+      - openssh-client
+      - openssh-server
+      - p7zip-full
+      - peek
+      - remmina
+      - shutter
+      - silversearcher-ag
+      - software-properties-common
+      - tig
+      - tree
+      - valgrind
+      - vim-gtk3
+      - xclip
+
+      # Fonts
+      - fonts-dejavu
+
+      # Programming
+      - build-essential
+      - ccls
+      - cscope
+      - fzf
+      - golang-go
+      - python3
+      - python3-distutils-extra
+      - python3-setuptools
+      - python3-pip
+      - universal-ctags
+      - yarn
+
+    state: latest
+    update_cache: true

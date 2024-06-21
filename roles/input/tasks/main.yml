@@ -1,0 +1,36 @@
+# Check to see what's actually needed to prompt the user for ---------------------------
+- name: Get git name, if it exists
+  community.general.git_config_info:
+    name: user.name
+    scope: global
+  register: git_name
+
+- name: Get git email, if it exists
+  community.general.git_config_info:
+    name: user.email
+    scope: global
+  register: git_email
+
+- name: Check if ssh key exists
+  stat:
+    path: ~/.ssh/id_rsa
+  register: ssh_key
+
+# Git and SSH user information -------------------------------------
+- name: Get user's name
+  ansible.builtin.pause:
+    prompt: "Enter your full name: "
+  register: user_name
+  when: not git_name.config_value
+
+- name: Get user's email
+  ansible.builtin.pause:
+    prompt: "Enter your email: "
+  register: email
+  when: not git_email.config_value
+
+# ---------------------------------------------------------------------
+# Call other playbooks
+# ---------------------------------------------------------------------
+- name: Run playbook that handle any user input
+  ansible.builtin.include: handle-input.yml

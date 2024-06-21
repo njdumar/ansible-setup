@@ -1,25 +1,28 @@
 # Purpose
-Arch linux only.
+Arch or Debian based Linux distros only.
 
 Use ansible to install a collection of packages, configurations, and link dotfiles (if ~/dotfiles exists) on a local system.
 
 Note: These ansible playbooks are meant to be run locally. This isn't setup to be on an ansible controller.
 
-# Installation (Arch linux):
+# Installation:
 If you have a repo containing saved dotfiles and .configs/, clone that repo to ~/dotfiles first.
 
 To install dependencies and run all the ansible playbooks:
 ```
-./setup.sh
+./run.sh
 ```
 
 # Post Installation
 Updates to config files needed:
-  - Configure monitors via arandr and save to ~/.screenlayout/defaul.sh
-  - Monitors may have different names then what is in .config/i3/config Update it
-  - Prevent displays from turning off: xset s off -dpms
-  - Nvidia drivers: https://wiki.archlinux.org/title/NVIDIA
-  - Use this to get all system info: inxi -Fzxx
+  - Ubuntu:
+    - Install latest nodejs from binary: https://github.com/nodesource/distributions
+  - All:
+    - Nvidia drivers: https://wiki.archlinux.org/title/NVIDIA
+    - Configure monitors via arandr and save to ~/.screenlayout/defaul.sh
+    - Monitors may have different names then what is in .config/i3/config Update it
+    - Prevent displays from turning off: xset s off -dpms
+    - Use this to get all system info: inxi -Fzxx
 
 # Terminal color test:
 To check if your terminal and/or tmux session supports 256 colors:
