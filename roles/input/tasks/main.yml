@@ -33,4 +33,4 @@
 # Call other playbooks
 # ---------------------------------------------------------------------
 - name: Run playbook that handle any user input
-  ansible.builtin.include: handle-input.yml
+  include_tasks: handle-input.yml

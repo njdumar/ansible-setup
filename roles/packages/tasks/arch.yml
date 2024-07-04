@@ -15,6 +15,7 @@
       - linux-lts-headers
       - neovim
       - nodejs
+      - npm
       - openssh
       - peek
       - remmina

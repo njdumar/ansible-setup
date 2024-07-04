@@ -9,10 +9,10 @@
     - "if [ -e ~/.bash_other ]; then source ~/.bash_other; fi"
 
 # Install all vim plugins -----------------------------
-- name: Install vim Plug plugins, if any
-  ansible.builtin.shell:
-    cmd: vim -c ":PlugInstall" -c ":qa"
-  ignore_errors: yes
+#- name: Install vim Plug plugins, if any
+#  ansible.builtin.shell:
+#    cmd: vim -c ":PlugInstall" -c ":qa"
+#  ignore_errors: yes
 
 # Tmux plugin setup -----------------------------
 - name: Clone the tmux plugin repository

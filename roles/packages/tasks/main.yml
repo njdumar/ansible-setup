@@ -2,11 +2,11 @@
 # Call other playbooks
 # ---------------------------------------------------------------------
 - name: Run playbook to install all Debian packages
-  ansible.builtin.include: debian.yml
+  include_tasks: debian.yml
   when: ansible_facts['os_family'] == "Debian"
 
 - name: Run playbook to install all Arch packages
-  ansible.builtin.include: arch.yml
+  include_tasks: arch.yml
   when: ansible_facts['os_family'] == "Archlinux"
 
 # Start Services ---------------------------------------------------

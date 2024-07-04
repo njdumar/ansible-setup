@@ -1,6 +1,6 @@
 - hosts: localhost
   roles:
-    - input
     - link-dotfiles
+    - input
     - packages
     - configure
