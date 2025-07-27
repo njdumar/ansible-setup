@@ -27,6 +27,7 @@
       - tmux
       - tree
       - xclip
+      - xfce4-power-manager
       - yay
 
       # Fonts
