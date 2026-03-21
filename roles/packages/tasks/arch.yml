@@ -8,17 +8,20 @@
       - arandr
       - bash-completion
       - btop
+      - dmenu
+      - flatpak
+      - firefox
       - git
       - gvim
       - htop
       - keychain
       - linux-lts-headers
       - neovim
-      - nodejs
       - npm
       - openssh
       - peek
       - remmina
+      - rofi
       - samba
       - shutter
       - smbclient
@@ -26,17 +29,26 @@
       - tig
       - tmux
       - tree
+      - xbanish
       - xclip
-      - xfce4-power-manager
       - yay
 
       # Fonts
       - ttf-dejavu
+      - ttf-font-awesome
+      - ttf-ubuntu-font-family
+
+      # wms
+      - i3
+      - xfce4
+      - xfce4-power-manager
+      - xfce4-panel
 
       # Programming
       - base-devel
       - ccls
       - cscope
+      - clang
       - ctags
       - fzf
       - go
@@ -45,3 +57,4 @@
       - python-pexpect
       - python-setuptools
       - yarn
+      - zed

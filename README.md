@@ -24,6 +24,23 @@ Updates to config files needed:
     - Prevent displays from turning off: xset s off -dpms
     - Use this to get all system info: inxi -Fzxx
 
+Get the kickstart.nvim clone for .config/nvim, run to install all plugins
+
+For audio control using i3, consider the following:
+
+```
+yay -S pavucontrol
+```
+
+SOme addtional packages to consider, but not worth installing automatically:
+
+```
+protonvpn
+vscode
+Creality Slicer and/or Orca Slicer (app images)
+appimagelauncher
+```
+
 # Terminal color test:
 To check if your terminal and/or tmux session supports 256 colors:
 ```

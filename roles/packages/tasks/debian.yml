@@ -36,6 +36,7 @@
       - tree
       - valgrind
       - vim-gtk3
+      - xbanish
       - xclip
 
       # Fonts
@@ -53,6 +54,7 @@
       - python3-pip
       - universal-ctags
       - yarn
+    - zed
 
     state: latest
     update_cache: true
