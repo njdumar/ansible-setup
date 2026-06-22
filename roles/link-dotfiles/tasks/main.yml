@@ -5,10 +5,9 @@
     recurse: no
     file_type: file
     patterns: "\\..*"
-    excludes: '.config'
     hidden: true
     use_regex: yes
-    excludes: '.gitignore,.gitsubmodule'
+    excludes: '.config,.gitignore,.gitsubmodule'
   register: dotfiles
 
 - name: Create symlinks of dotfiles to ~/
