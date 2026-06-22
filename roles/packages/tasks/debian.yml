@@ -1,16 +1,16 @@
 # Add APT repos --------------------------------------
 # For some reason, using Ansible's built in apt repo modules doesn't work
 - name: Add ppa for Alacritty.
-  become: yes
+  become: true
   shell: sh -c 'add-apt-repository -y ppa:aslatter/ppa'
 
 - name: Add ppa for updated stable neovim.
-  become: yes
+  become: true
   shell: sh -c 'add-apt-repository -y ppa:neovim-ppa/unstable'
 
 # Package Installation --------------------------------------
 - name: install packages
-  become: yes
+  become: true
   apt:
     pkg:
       - alacritty
@@ -54,7 +54,6 @@
       - python3-pip
       - universal-ctags
       - yarn
-    - zed
 
     state: latest
     update_cache: true

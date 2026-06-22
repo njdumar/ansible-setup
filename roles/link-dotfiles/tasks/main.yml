@@ -12,7 +12,7 @@
   register: dotfiles
 
 - name: Create symlinks of dotfiles to ~/
-  ignore_errors: yes
+  ignore_errors: true
   file:
     src: "{{ item.path }}"
     path: "~/{{ item.path | basename }}"
@@ -26,7 +26,7 @@
   register: vim
 
 - name: Create symlink to ~/
-  ignore_errors: yes
+  ignore_errors: true
   file:
     src: "~/dotfiles/.vim"
     path: "~/.vim"
@@ -35,7 +35,7 @@
 
 # Link all .config/ folders found in ~/dotfiles --------------------------------------
 - name: Find dotfiles in "~/dotfiles/.config"
-  ignore_errors: yes
+  ignore_errors: true
   find:
     paths: ~/dotfiles/.config
     recurse: yes
@@ -46,7 +46,7 @@
   register: configs
 
 - name: Create symlinks to ~/.config
-  ignore_errors: yes
+  ignore_errors: true
   file:
     src: "{{ item.path }}"
     path: "~/.config/{{ item.path | basename }}"

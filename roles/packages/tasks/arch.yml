@@ -54,6 +54,10 @@
       - ctags
       - fzf
       - go
+      - gopls
+      - staticcheck
+      - go-tools
+      - goreleaser
       - python
       - python-pip
       - python-pexpect
