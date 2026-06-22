@@ -33,6 +33,7 @@
       - tree
       - xclip
       - yay
+      - zsh
 
       # Fonts
       - ttf-dejavu

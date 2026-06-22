@@ -36,8 +36,8 @@
       - tree
       - valgrind
       - vim-gtk3
-      - xbanish
       - xclip
+      - zsh
 
       # Fonts
       - fonts-dejavu
