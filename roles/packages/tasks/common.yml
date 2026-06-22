@@ -1,0 +1,16 @@
+- name: Check if Oh My Zsh is installed
+  stat:
+    path: ~/.oh-my-zsh
+  register: check_oh_my_zsh
+
+- name: Download Oh My Zsh installation script
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/install_ohmyzsh.sh
+    mode: "0777"
+  when: not check_oh_my_zsh.stat.exists
+
+- name: Run Oh My Zsh installation script
+  ansible.builtin.command:
+    cmd: sh /tmp/install_ohmyzsh.sh
+  when: not check_oh_my_zsh.stat.exists
