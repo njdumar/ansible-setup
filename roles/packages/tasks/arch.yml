@@ -1,6 +1,6 @@
 # Package Installation --------------------------------------
 - name: install packages
-  become: yes
+  become: true
   pacman:
     update_cache: yes
     name:
@@ -11,11 +11,13 @@
       - dmenu
       - flatpak
       - firefox
+      - cameractrls
       - git
       - gvim
       - htop
       - keychain
       - linux-lts-headers
+      - neofetch
       - neovim
       - npm
       - openssh
